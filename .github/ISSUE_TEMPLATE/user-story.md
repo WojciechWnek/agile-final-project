@@ -30,30 +30,32 @@ Story 10 (Automation): As a developer, I need automation to deploy new changes t
    
 Story 1: Create a product
 
-Given the administrator is on the catalog dashboard
+Given the administrator is authenticated and on the catalog dashboard
+
 When they submit valid product details (name, price, description)
-Then a new product should be created and saved in the catalog
+
+Then the system must create the new product and display it in the catalog inventory
 
 Story 2: Retrieve a product
 
 Given a product exists in the catalog with a specific ID
-When a customer requests the product using that ID
-Then the system should return the complete details of that product
+When a customer requests to view the product using that ID
+Then the system must return and display the complete details of that specific product
 
 Story 3: Update a product
 
-Given a product exists in the catalog
-When the administrator modifies the product's price and saves
-Then the product in the catalog should reflect the newly updated price
+Given a product already exists in the catalog
+When the administrator modifies the product's price and clicks save
+Then the system must update the database and the catalog must reflect the newly updated price
 
 Story 4: Delete a product
 
-Given a product exists in the catalog
-When the administrator selects the product and confirms deletion
-Then the product should be permanently removed from the catalog
+Given a product currently exists in the catalog
+When the administrator selects the product and confirms the deletion prompt
+Then the system must permanently remove the product from the catalog and the database
 
 Story 5: Like a product
 
-Given a customer is viewing a specific product
-When they click the "Like" button
-Then the total like count for that product should increase by one
+Given a customer is logged in and viewing a specific product page
+When the customer clicks the "Like" button
+Then the system must increment the total like count for that product by exactly one
